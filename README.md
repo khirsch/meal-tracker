@@ -6,7 +6,9 @@
 
 Meal Tracker is a prototype web app built with Angular2 that allows you to log the foods you eat and track your calorie consumption.
 
-![alt tag](screenshot.png)
+<p align="center">
+  <img src="https://raw.githubusercontent.com/khirsch/meal-tracker/master/screenshot.png">
+</p>
 
 ## Setup/Installation Requirements
 
