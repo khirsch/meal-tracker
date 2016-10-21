@@ -4,11 +4,16 @@ import { Meal } from './meal.model';
 @Component ({
   selector: 'meal-list',
   template: `
-  <div *ngFor="let currentMeal of childMealList">
-      <meal-display [meal]="currentMeal"
-      ></meal-display>
-      <button class="btn" (click)="editButtonClicked(currentMeal)">Edit</button>
-  </div>
+    <div *ngFor="let currentMeal of childMealList">
+      <div class="col-sm-1">
+        <img id="edit" src="./../resources/images/edit.png" (click)="editButtonClicked(currentMeal)">
+      </div>
+      <div class="col-sm-11">
+        <meal-display [meal]="currentMeal"
+        ></meal-display>
+        <p id="divider">-------------------------</p>
+      </div>
+    </div>
   `
 })
 

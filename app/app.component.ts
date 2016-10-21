@@ -5,16 +5,33 @@ import { Meal } from './meal.model';
   selector: 'meal-tracker',
   template: `
   <div class="container">
-    <h1>Meal Tracker</h1>
-    <img src="./../resources/images/icon.png">
-    <meal-list
-      [childMealList] = "masterMealList"
-      (clickSender)="showDetails($event)"
-    ></meal-list>
-    <edit-meal
-      [childSelectedMeal] = "selectedMeal"
-      (doneClickedSender) = "doneEditing()"
-    ></edit-meal>
+    <div id="header">
+      <h1>Meal Tracker</h1>
+      <img id="logo" src="./../resources/images/logo.png">
+    </div>
+    <div id="spacer">
+    </div>
+    <div id="content" class="row">
+      <div id="new-meal" class="col-sm-3">
+        <edit-meal
+          [childSelectedMeal] = "selectedMeal"
+          (doneClickedSender) = "doneEditing()"
+        ></edit-meal>
+      </div>
+      <div id="meal-list" class="col-sm-6">
+        <h4>Meals</h4>
+        <meal-list
+          [childMealList] = "masterMealList"
+          (clickSender)="showDetails($event)"
+        ></meal-list>
+      </div>
+      <div id="edit-meal" class="cold-sm-3">
+        <edit-meal
+          [childSelectedMeal] = "selectedMeal"
+          (doneClickedSender) = "doneEditing()"
+        ></edit-meal>
+      </div>
+    </div>
   </div>
   `
 })
