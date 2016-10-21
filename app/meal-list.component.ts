@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Meal } from './meal.model';
+import { MealComponent } from './meal.component';
 
 @Component ({
   selector: 'meal-list',
@@ -24,6 +25,7 @@ import { Meal } from './meal.model';
 
 export class MealListComponent {
   @Input() childMealList: Meal[];
+  @Input() childSelectedFilter: String;
   @Output() clickSender = new EventEmitter();
 
   public selectedFilter: string = "all";
