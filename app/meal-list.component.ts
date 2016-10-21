@@ -4,7 +4,12 @@ import { Meal } from './meal.model';
 @Component ({
   selector: 'meal-list',
   template: `
-    <div *ngFor="let currentMeal of childMealList">
+    <select (change)="onChange($event.target.value)" class="filter">
+      <option value="all" selected="selected">Show All</option>
+      <option value="high">Show High-Calorie</option>
+      <option value="low">Show Low-Calorie</option>
+    </select>
+    <div *ngFor="let currentMeal of childMealList | filter:selectedFilter">
       <div class="col-sm-1">
         <img id="edit" src="./../resources/images/edit.png" (click)="editButtonClicked(currentMeal)">
       </div>
@@ -20,6 +25,11 @@ import { Meal } from './meal.model';
 export class MealListComponent {
   @Input() childMealList: Meal[];
   @Output() clickSender = new EventEmitter();
+
+  public selectedFilter: string = "all";
+  onChange(optionFromMenu) {
+    this.selectedFilter = optionFromMenu;
+  }
 
   editButtonClicked(mealToEdit: Meal) {
     this.clickSender.emit(mealToEdit);

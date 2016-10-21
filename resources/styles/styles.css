@@ -18,6 +18,12 @@ form {
   margin: 0 auto;
 }
 
+select {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
 .btn {
   background: #FFFFFF;
   border: 1px solid #e5bd49;
