@@ -6,10 +6,13 @@ import { Meal } from './meal.model';
   template: `
     <div *ngIf="childSelectedMeal">
       <h4>Edit Meal</h4>
-      <form>
         <div>
           <label>Name:</label>
           <input type="text" [(ngModel)]="childSelectedMeal.name">
+        </div>
+        <div>
+          <label>Calories:</label>
+          <input type="number" [(ngModel)]="childSelectedMeal.calories">
         </div>
         <div>
           <label>Type:</label>
@@ -19,12 +22,7 @@ import { Meal } from './meal.model';
           <label>Details:</label>
           <input type="text" [(ngModel)]="childSelectedMeal.details">
         </div>
-        <div>
-          <label>Calories:</label>
-          <input type="number" [(ngModel)]="childSelectedMeal.calories">
-        </div>
         <button class="btn" (click)="doneClicked()">Done</button>
-      </form>
     </div>
   `
 })
