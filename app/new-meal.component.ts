@@ -6,29 +6,31 @@ import { Meal } from './meal.model';
   template: `
     <div>
       <h4>Add Meal</h4>
-      <div>
-        <label>Name:</label>
-        <input #newName>
-      </div>
-      <div>
-        <label>Calories:</label>
-        <input #newCalories>
-      </div>
-      <div>
-        <label>Type:</label>
-        <input #newType>
-      </div>
-      <div>
-        <label>Details:</label>
-        <input #newDetails>
-      </div>
-      <button class="btn" (click)="
-        addClicked(newName.value, newCalories.value, newType.value, newDetails.value);
-        newName.value='';
-        newCalories.value='';
-        newType.value='';
-        newDetails.value='';
-      ">Add</button>
+      <form>
+        <div>
+          <label>Name:</label>
+          <input #newName>
+        </div>
+        <div>
+          <label>Calories:</label>
+          <input #newCalories>
+        </div>
+        <div>
+          <label>Type:</label>
+          <input #newType>
+        </div>
+        <div>
+          <label>Details:</label>
+          <input #newDetails>
+        </div>
+        <button class="btn" (click)="
+          addClicked(newName.value, newCalories.value, newType.value, newDetails.value);
+          newName.value='';
+          newCalories.value='';
+          newType.value='';
+          newDetails.value='';
+        ">Add</button>
+      </form>
     </div>
   `
 })
