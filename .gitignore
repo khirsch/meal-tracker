@@ -6,4 +6,3 @@ app/*.js.map
 .DS_Store
 build/
 typings/
-screenshot.png
