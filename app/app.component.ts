@@ -6,8 +6,8 @@ import { Meal } from './meal.model';
   template: `
   <div class="container">
     <div id="header">
-      <h1>Meal Tracker</h1>
       <img id="logo" src="./../resources/images/logo.png">
+      <h1>Meal Tracker</h1>
     </div>
     <div id="spacer">
     </div>
